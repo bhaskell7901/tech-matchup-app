@@ -21,6 +21,10 @@ function App() {
             path="/matchup/:id" 
             element={<Vote />} 
           />
+          <Route 
+            path="*" 
+            element={<NotFound />} 
+          />
         </Routes>
       </div>
     </Router>

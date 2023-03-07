@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getAllTech, createMatchup } from '../utils/api';
+import { getAllTech, createMatchup } from '../utils/queries';
 
 const Matchup = () => {
   const [techList, setTechList] = useState([]);
