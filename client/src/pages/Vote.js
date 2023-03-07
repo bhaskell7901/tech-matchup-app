@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { getMatchup, createVote } from '../utils/queries';
+import { getMatchup } from '../utils/queries';
+import { addVote } from '../utils/mutation';
 
 const Vote = () => {
   const [matchup, setMatchup] = useState({});
@@ -24,7 +25,7 @@ const Vote = () => {
 
   const handleVote = async (techNum) => {
     try {
-      const res = await createVote({ id, techNum });
+      const res = await addVote({ id, techNum });
 
       if (!res.ok) {
         throw new Error('Could not vote');

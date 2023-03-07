@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getAllTech, createMatchup } from '../utils/queries';
+import { getAllTech } from '../utils/queries';
+import { createMatchup} from '../utils/mutations';
 
 const Matchup = () => {
   const [techList, setTechList] = useState([]);
