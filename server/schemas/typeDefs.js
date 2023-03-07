@@ -25,7 +25,7 @@ type Mutation {
     createMatchup(tech1: String!,
         tech2: String!):  Matchup
     
-    createVote(matchupId : ID!) : Matchup 
+    createVote(matchupId : ID!, techNum: Int!) : Matchup 
 }
 `
 module.exports = typeDefs;
